@@ -2,6 +2,8 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from api.user.views.category_view import CategoryListApiView
 from api.user.views.product_view import ProductListApiView
+from api.user.views.cart_view import CartListApiView
+from api.user.views.order_view import OrderListApiView
 
 
 router = DefaultRouter()
@@ -14,4 +16,6 @@ urlpatterns = [
 
     path('product/', ProductListApiView.as_view()),
     path('category/', CategoryListApiView.as_view()),
+    path('cart/', CartListApiView.as_view()),
+    path('order/', OrderListApiView.as_view()),
 ]
